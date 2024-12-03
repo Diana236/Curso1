@@ -426,7 +426,7 @@ function revisarColision( enemigo) {
         return
     }
 
-    alert("Hay colision")
+    alert("Hay colision prueba")
 
 }
 
