@@ -59,15 +59,15 @@ mapa.width = anchoDelMapa
 mapa.height = alturaQueBuscamos
 
 class Mokepon {
-    constructor(nombre, foto, vida, fotoMapa, x = 10, y = 10, ){
+    constructor(nombre, foto, vida, fotoMapa ){
         this.nombre = nombre
         this.foto = foto
         this.vida = vida
         this.ataques = []
-        this.x = x
-        this.y = y
-        this.ancho = 80
-        this.alto = 80
+        this.ancho = 40
+        this.alto = 40
+        this.x = aleatorio(0, mapa.width - this.ancho)
+        this.y = aleatorio(0, mapa.height - this.alto)
         this.mapaFoto = new Image()
         this.mapaFoto.src = fotoMapa
         this.velocidadX = 0
@@ -85,18 +85,18 @@ class Mokepon {
     }
 }
 
-let hipodoge = new Mokepon('Hipodoge', 'assets/hipodoge.png', 5, './assets/hipodogeCara.png' )
+let hipodoge = new Mokepon('Hipodoge', 'assets/mokepon_hipodoge.png', 5, './assets/hipodogeCara.png' )
 
-let capipepo = new Mokepon('Capipepo', 'assets/capipepo.png', 5, './assets/capipepoCara.png' )
+let capipepo = new Mokepon('Capipepo', 'assets/mokepon_capipepo.png', 5, './assets/capipepoCara.png' )
 
-let ratigueya = new Mokepon ('Ratigueya', 'assets/ratigueya.png', 5, './assets/ratigueyaCara.png')
+let ratigueya = new Mokepon ('Ratigueya', 'assets/mokepon_ratigueya.png', 5, './assets/ratigueyaa.png')
 
 
-let hipodogeEnemigo = new Mokepon('Hipodoge', 'assets/hipodoge.png', 5, './assets/hipodogeCara.png', 80, 120)
+let hipodogeEnemigo = new Mokepon('Hipodoge', 'assets/mokepon_hipodoge.png', 5, './assets/hipodogeCara.png')
 
-let capipepoEnemigo = new Mokepon('Capipepo', 'assets/capipepo.png', 5, './assets/capipepoCara.png', 150, 95)
+let capipepoEnemigo = new Mokepon('Capipepo', 'assets/mokepon_capipepo.png', 5, './assets/capipepoCara.png')
 
-let ratigueyaEnemigo = new Mokepon ('Ratigueya', 'assets/ratigueya.png', 5, './assets/ratigueyaCara.png', 200, 190)
+let ratigueyaEnemigo = new Mokepon ('Ratigueya', 'assets/mokepon_ratigueya.png', 5, './assets/ratigueyaa.png')
 
 
 
